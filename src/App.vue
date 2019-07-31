@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <uploadFile />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import uploadFile from './components/uploadFile'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    uploadFile
   }
 }
 </script>
@@ -22,7 +21,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin:auto;
+  background-color: rgba(114, 186, 249, 0.845);
 }
 </style>
