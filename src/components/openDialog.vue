@@ -1,6 +1,9 @@
 <template>
   <div class="uploads">
-    <p id="SelectFile" @click="openDialog">Or upload a file from here</p>
+    <form>
+      <label for="chooseFile"> Or choose file to upload </label>
+      <input type="file" id="chooseFile" @change="FileSelected" accept="video/*">
+    </form>
   </div>
 </template>
   
@@ -9,8 +12,13 @@
 export default {
   name:'openDialog',
   methods:{
-    openDialog(){
-      console.log('test')
+    FileSelected(event) {
+      const file = event.target.files[0].path
+      console.log(file)
+      sendMessageToJulia(file)
+
+
+      
     }
   }
 }
@@ -21,14 +29,32 @@ export default {
     margin: auto;
     width: 50%;
   }
-  #SelectFile {
-    margin: 20px;
-    color: rgba(4, 116, 164, 0.673);
-  }
-  #SelectFile:hover{
-    cursor: pointer;
-    color: white;
-  }
+ input[type="file"]{
+   display: none;
+ }
+  form {
+  min-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+form label{
+  background-color: #7F9CCB;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  height: auto;
+  border: 1px solid rgb(84, 82, 82);
+}
+
+form label:hover {
+  background-color: #2D5BA3;
+  color: white;
+}
+
+form label:active {
+  background-color: #0D3F8F;
+  color: white;
+}
   
 </style>
 

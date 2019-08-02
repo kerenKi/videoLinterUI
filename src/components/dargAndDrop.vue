@@ -49,8 +49,10 @@ export default {
         text-align: center;
         width:300px;
         height:300px;
-        margin: 10px;
+        margin: 20px auto;
         padding: 40px;
+        border-radius: 2%;
+        border: 1px solid rgb(84, 82, 82);
     }
 </style>
 
