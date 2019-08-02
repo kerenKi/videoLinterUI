@@ -5,6 +5,7 @@
 </template>
   
 <script>
+import { all } from 'q';
 export default {
   name:'dragAndDrop',
   methods:{
@@ -27,8 +28,16 @@ export default {
             e.preventDefault();
 
             for (let f of e.dataTransfer.files) {
-                console.log('File(s) you dragged here: ', f.path)
+                const pathSplit = f.path.split('.')
+                const Extension = pathSplit.pop()
+                const validExtesions = ['mkv', 'avi', 'mp4']
+              if (validExtesions.includes(Extension)){
+                console.log(f.path)
                 sendMessageToJulia(f.path)
+                alert("File uploaded")
+              } else {
+                alert("The file is not a video file.\n Allowed formats: mkv, avi, mp4")
+              }
             }
             
             return false;

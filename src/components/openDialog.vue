@@ -16,6 +16,7 @@ export default {
       const file = event.target.files[0].path
       console.log(file)
       sendMessageToJulia(file)
+      alert("File uploaded")
 
 
       
