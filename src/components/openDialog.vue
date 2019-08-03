@@ -1,14 +1,13 @@
 <template>
   <div class="uploads">
     <form>
-      <label for="chooseFile"> Or choose file to upload </label>
+      <label for="chooseFile"> Choose file to upload from your computer </label>
       <input type="file" id="chooseFile" @change="FileSelected" accept="video/*">
     </form>
   </div>
 </template>
   
 <script>
-
 export default {
   name:'openDialog',
   methods:{
@@ -26,17 +25,21 @@ export default {
 </script>
 
 <style scoped>
+  
   .uploads{
+    display: flex;
+    float: right;
     margin: auto;
-    width: 50%;
+    width: 40%;
   }
  input[type="file"]{
    display: none;
  }
   form {
-  min-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 350px;
+  margin: auto 0 ;
+  margin-right: 30px;
+
 }
 form label{
   background-color: #7F9CCB;
@@ -56,6 +59,5 @@ form label:active {
   background-color: #0D3F8F;
   color: white;
 }
-  
 </style>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="uploads" id="drag-file" @mouseover="dropFile">
-    <p>Drag your files here</p>
+    <p>Drag your file here</p>
   </div>
 </template>
   
@@ -50,15 +50,17 @@ export default {
 <style scoped>
   .uploads{
     margin: auto;
-    width: 50%;
+    width: 40%;
   }
   #drag-file {
+        display: flex;
+        float: left;
         background-color: rgb(97, 138, 155);
         color:white;
         text-align: center;
         width:300px;
         height:300px;
-        margin: 20px auto;
+        margin-left: 30px;
         padding: 40px;
         border-radius: 2%;
         border: 1px solid rgb(84, 82, 82);
