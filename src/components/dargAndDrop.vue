@@ -61,6 +61,7 @@ export default {
         width:300px;
         height:300px;
         margin-left: 30px;
+        margin-bottom: 20px;
         padding: 40px;
         border-radius: 2%;
         border: 1px solid rgb(84, 82, 82);
