@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <div v-if="!fileUpload" class="file_upload">
       <h1>Video Linter</h1>
       <p>Welcome to Video Linter! <br> Upload your video file and the linter will check for bad frames like black frames or silent ones</p>
       <p>There are 2 options to upload a file:</p>
-      <dragAndDrop />
-      <openDialog />
+      <dragAndDrop @file-uploaded="updateFile"/>
+      <openDialog @file-uploaded="updateFile"/>
     </div>
     <div v-if="fileUpload" class="loading">
         <pixel-spinner
@@ -35,8 +35,15 @@ export default {
   },
   data(){
     return {
-      fileUpload: true,
+      fileUpload: false,
       dataReady: false
+    }
+  },
+  methods: {
+    updateFile(){
+      console.log('test')
+      console.log(this.fileUpload)
+      return this.fileUpload = true
     }
   }
 }

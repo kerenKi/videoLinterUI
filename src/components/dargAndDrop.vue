@@ -35,6 +35,7 @@ export default {
                 console.log(f.path)
                 sendMessageToJulia(f.path)
                 alert("File uploaded")
+                this.$emit('file-uploaded')
               } else {
                 alert("The file is not a video file.\n Allowed formats: mkv, avi, mp4")
               }
