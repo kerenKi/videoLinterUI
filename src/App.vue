@@ -41,8 +41,6 @@ export default {
   },
   methods: {
     updateFile(){
-      console.log('test')
-      console.log(this.fileUpload)
       return this.fileUpload = true
     }
   }
