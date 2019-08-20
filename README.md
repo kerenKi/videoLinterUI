@@ -1,3 +1,8 @@
+# Deprecated! All the files are now available [here](https://github.com/d1cker/VideoLinter/tree/master/GUI)
+
+
+
+
 # electron-with-vue
 
 ## Project setup
